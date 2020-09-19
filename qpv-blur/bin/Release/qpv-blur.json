@@ -1,0 +1,43 @@
+{
+    "name": "qpv-blur",
+    "version": "1.0.0",
+    "title": "Blur",
+    "description": {
+        "en": "Blur region",
+        "ru": "Размыть регион"
+    },
+    "link": "https://github.com/Beelink/qpv-blur",
+    "authors": [
+        {
+            "name": "Beelink",
+            "link": "https://github.com/Beelink"
+        }
+    ],
+    "targets": [
+        {
+            "name": "quick-picture-viewer",
+            "minVersion": "2.2.0",
+            "maxVersion": "2.2.0"
+        }
+    ],
+    "functions": [
+        {
+            "name": "blur",
+            "title": {
+                "en": "Blur region",
+                "ru": "Размыть регион"
+            },
+            "hotkey": {
+                "shift": true,
+                "key": 66
+            },
+            "props": {
+                "image": true,
+                "showDialog": true,
+                "returnImage": true,
+                "hideMainForm": false
+            }
+        }
+    ],
+    "dlltype": "cs"
+}
