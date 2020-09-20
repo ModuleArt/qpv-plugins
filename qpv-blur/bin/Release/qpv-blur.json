@@ -6,7 +6,7 @@
         "en": "Blur region",
         "ru": "Размыть регион"
     },
-    "link": "https://github.com/Beelink/qpv-blur",
+    "link": "https://github.com/ModuleArt/qpv-blur",
     "authors": [
         {
             "name": "Beelink",
@@ -32,10 +32,9 @@
                 "key": 66
             },
             "props": {
-                "image": true,
-                "showDialog": true,
-                "returnImage": true,
-                "hideMainForm": false
+                "imageRequired": true,
+                "configurable": true,
+                "returnImage": true
             }
         }
     ],

@@ -4,6 +4,8 @@ C:\Users\beelink\source\repos\qpv-blur\qpv-blur\obj\Release\qpv-blur.dll
 C:\Users\beelink\source\repos\qpv-blur\qpv-blur\obj\Release\qpv-blur.pdb
 D:\Projects\qpv-blur\qpv-blur\bin\Release\qpv-blur.dll
 D:\Projects\qpv-blur\qpv-blur\bin\Release\qpv-blur.pdb
-D:\Projects\qpv-blur\qpv-blur\obj\Release\qpv-blur.csprojAssemblyReference.cache
 D:\Projects\qpv-blur\qpv-blur\obj\Release\qpv-blur.dll
 D:\Projects\qpv-blur\qpv-blur\obj\Release\qpv-blur.pdb
+D:\Projects\qpv-blur\qpv-blur\obj\Release\qpv_blur.BlurRegionForm.resources
+D:\Projects\qpv-blur\qpv-blur\obj\Release\qpv-blur.csproj.GenerateResource.cache
+D:\Projects\qpv-blur\qpv-blur\bin\Release\qpv-blur.dll.config
