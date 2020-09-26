@@ -3,8 +3,9 @@
     "version": "1.0.0",
     "title": "Blur",
     "description": {
-        "en": "Blur region",
-        "ru": "Размыть регион"
+        "en": "Blur or pixelate region",
+        "ru": "Размытие или пикселизация области",
+        "es": "Difuminar o pixelar un área"
     },
     "link": "https://github.com/ModuleArt/qpv-blur",
     "authors": [
@@ -25,7 +26,8 @@
             "name": "blur",
             "title": {
                 "en": "Blur region",
-                "ru": "Размыть регион"
+                "ru": "Размыть область",
+                "es": "Área de desenfoque"
             },
             "hotkey": {
                 "shift": true,

@@ -34,5 +34,17 @@ namespace qpv_blur.Properties {
                 this["Radius"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Type {
+            get {
+                return ((int)(this["Type"]));
+            }
+            set {
+                this["Type"] = value;
+            }
+        }
     }
 }
