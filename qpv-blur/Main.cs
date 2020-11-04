@@ -27,12 +27,13 @@ namespace qpv_blur
             }
 		}
 
-		public void blur_conf(Bitmap bmp, string path, bool darkMode, string language)
+		public void blur_conf(Bitmap bmp, string path, bool darkMode, string language, bool alwaysOnTop)
 		{
 			if (brf == null || brf.IsDisposed)
 			{
 				brf = new BlurRegionForm(bmp);
 			}
+            brf.TopMost = alwaysOnTop;
             brf.ShowDialog();
         }
 
