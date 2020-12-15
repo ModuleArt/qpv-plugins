@@ -18,11 +18,11 @@ namespace qpv_blur
 			{
                 if (Properties.Settings.Default.Type == 0)
                 {
-                    return Main.ProcessBlur(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height), Properties.Settings.Default.Radius);
+                    return ProcessBlur(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height), Properties.Settings.Default.Radius);
                 }
                 else 
                 {
-                    return Main.ProcessPixelate(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height), Properties.Settings.Default.Radius);
+                    return ProcessPixelate(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height), Properties.Settings.Default.Radius);
                 }
             }
 		}
