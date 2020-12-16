@@ -124,9 +124,9 @@
 			this.label1.Location = new System.Drawing.Point(10, 110);
 			this.label1.Margin = new System.Windows.Forms.Padding(0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(50, 17);
+			this.label1.Size = new System.Drawing.Size(43, 17);
 			this.label1.TabIndex = 2;
-			this.label1.Text = "Radius:";
+			this.label1.Text = "Effect:";
 			// 
 			// radiusLabel
 			// 

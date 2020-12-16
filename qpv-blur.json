@@ -1,6 +1,6 @@
 {
   "name": "qpv-blur",
-  "version": "2.0.0",
+  "version": "1.0.2",
   "title": "Blur",
   "description": {
     "en": "Blur or pixelate region",
@@ -15,7 +15,6 @@
     }
   ],
   "apiVer": 2,
-  "pluginType": "effect",
   "inputType": "bitmap",
   "dllType": "csharp",
   "functions": [
@@ -26,13 +25,9 @@
         "ru": "Размыть область",
         "es": "Área de desenfoque"
       },
-      "hotkey": {
-        "shift": true,
-        "key": 66
-      },
+      "type": "effect",
       "configurable": true,
-      "inputRequired": true,
-      "output":  true
+      "inputRequired": true
     }
   ]
 }
