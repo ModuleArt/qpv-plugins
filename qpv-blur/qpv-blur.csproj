@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlurMan.cs" />
     <Compile Include="BlurRegionForm.cs">
       <SubType>Form</SubType>
     </Compile>

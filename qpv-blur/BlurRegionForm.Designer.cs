@@ -31,8 +31,9 @@
 			this.radiusSlider = new System.Windows.Forms.TrackBar();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.previewBtn = new System.Windows.Forms.Button();
-			this.saveBtn = new System.Windows.Forms.Button();
+			this.applyBtn = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.resetBtn = new System.Windows.Forms.Button();
 			this.typeComboBox = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.radiusLabel = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
 			this.radiusSlider.Size = new System.Drawing.Size(180, 45);
 			this.radiusSlider.TabIndex = 0;
 			this.radiusSlider.Value = 1;
+			this.radiusSlider.ValueChanged += new System.EventHandler(this.radiusSlider_ValueChanged);
 			// 
 			// pictureBox1
 			// 
@@ -77,22 +79,23 @@
 			this.previewBtn.UseVisualStyleBackColor = true;
 			this.previewBtn.Click += new System.EventHandler(this.previewBtn_Click);
 			// 
-			// saveBtn
+			// applyBtn
 			// 
-			this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.saveBtn.Location = new System.Drawing.Point(579, 319);
-			this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
-			this.saveBtn.Name = "saveBtn";
-			this.saveBtn.Size = new System.Drawing.Size(95, 32);
-			this.saveBtn.TabIndex = 3;
-			this.saveBtn.Text = "Save";
-			this.saveBtn.UseVisualStyleBackColor = true;
-			this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+			this.applyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.applyBtn.Location = new System.Drawing.Point(579, 319);
+			this.applyBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.applyBtn.Name = "applyBtn";
+			this.applyBtn.Size = new System.Drawing.Size(95, 32);
+			this.applyBtn.TabIndex = 3;
+			this.applyBtn.Text = "Apply";
+			this.applyBtn.UseVisualStyleBackColor = true;
+			this.applyBtn.Click += new System.EventHandler(this.saveBtn_Click);
 			// 
 			// groupBox1
 			// 
 			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Controls.Add(this.resetBtn);
 			this.groupBox1.Controls.Add(this.typeComboBox);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.radiusLabel);
@@ -106,6 +109,18 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Options";
 			// 
+			// resetBtn
+			// 
+			this.resetBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.resetBtn.Location = new System.Drawing.Point(137, 0);
+			this.resetBtn.Margin = new System.Windows.Forms.Padding(0);
+			this.resetBtn.Name = "resetBtn";
+			this.resetBtn.Size = new System.Drawing.Size(64, 32);
+			this.resetBtn.TabIndex = 5;
+			this.resetBtn.Text = "Reset";
+			this.resetBtn.UseVisualStyleBackColor = true;
+			this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
+			// 
 			// typeComboBox
 			// 
 			this.typeComboBox.FormattingEnabled = true;
@@ -117,6 +132,7 @@
 			this.typeComboBox.Name = "typeComboBox";
 			this.typeComboBox.Size = new System.Drawing.Size(180, 25);
 			this.typeComboBox.TabIndex = 3;
+			this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
 			// 
 			// label1
 			// 
@@ -144,7 +160,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(684, 361);
 			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.saveBtn);
+			this.Controls.Add(this.applyBtn);
 			this.Controls.Add(this.previewBtn);
 			this.Controls.Add(this.pictureBox1);
 			this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,10 +183,11 @@
 		private System.Windows.Forms.TrackBar radiusSlider;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Button previewBtn;
-		private System.Windows.Forms.Button saveBtn;
+		private System.Windows.Forms.Button applyBtn;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Label radiusLabel;
 		private System.Windows.Forms.ComboBox typeComboBox;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button resetBtn;
 	}
 }
