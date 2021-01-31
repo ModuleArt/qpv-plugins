@@ -1,0 +1,3 @@
+D:\Projects\qpv-blur\qpv-plugins\obj\Debug\qpv-plugins.csprojAssemblyReference.cache
+D:\Projects\qpv-blur\qpv-plugins\obj\Debug\qpv_plugins.BlurRegionForm.resources
+D:\Projects\qpv-blur\qpv-plugins\obj\Debug\qpv-plugins.csproj.GenerateResource.cache

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A9BA9DC5-6EFE-42C0-A802-13060837D5BF}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>qpv_blur</RootNamespace>
-    <AssemblyName>qpv-blur</AssemblyName>
+    <RootNamespace>qpv_plugins</RootNamespace>
+    <AssemblyName>qpv-plugins</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

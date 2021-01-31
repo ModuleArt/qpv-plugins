@@ -1,4 +1,4 @@
-﻿namespace qpv_blur
+﻿namespace qpv_plugins
 {
 	partial class BlurRegionForm
 	{

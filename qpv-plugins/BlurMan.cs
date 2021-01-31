@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace qpv_blur
+namespace qpv_plugins
 {
 	public static class BlurMan
 	{

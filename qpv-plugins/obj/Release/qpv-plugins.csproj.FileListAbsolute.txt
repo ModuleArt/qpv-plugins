@@ -1,0 +1,14 @@
+D:\Projects\qpv-blur\qpv-blur\bin\Release\qpv-plugins.dll.config
+D:\Projects\qpv-blur\qpv-blur\bin\Release\qpv-plugins.dll
+D:\Projects\qpv-blur\qpv-blur\bin\Release\qpv-plugins.pdb
+D:\Projects\qpv-blur\qpv-blur\obj\Release\qpv_plugins.BlurRegionForm.resources
+D:\Projects\qpv-blur\qpv-blur\obj\Release\qpv-plugins.csproj.GenerateResource.cache
+D:\Projects\qpv-blur\qpv-blur\obj\Release\qpv-plugins.dll
+D:\Projects\qpv-blur\qpv-blur\obj\Release\qpv-plugins.pdb
+D:\Projects\qpv-blur\qpv-plugins\bin\Release\qpv-plugins.dll.config
+D:\Projects\qpv-blur\qpv-plugins\bin\Release\qpv-plugins.dll
+D:\Projects\qpv-blur\qpv-plugins\bin\Release\qpv-plugins.pdb
+D:\Projects\qpv-blur\qpv-plugins\obj\Release\qpv_plugins.BlurRegionForm.resources
+D:\Projects\qpv-blur\qpv-plugins\obj\Release\qpv-plugins.csproj.GenerateResource.cache
+D:\Projects\qpv-blur\qpv-plugins\obj\Release\qpv-plugins.dll
+D:\Projects\qpv-blur\qpv-plugins\obj\Release\qpv-plugins.pdb

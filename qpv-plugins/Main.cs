@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace qpv_blur
+namespace qpv_plugins
 {
 	public class Main
 	{
@@ -14,8 +14,6 @@ namespace qpv_blur
                 brf = new BlurRegionForm(bmp);
             }
             brf.TopMost = alwaysOnTop;
-
-            brf.Owner.Hide();
 
             if (brf.ShowDialog() == DialogResult.OK)
             {

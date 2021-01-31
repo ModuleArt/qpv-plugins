@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("QPV Blur")]
-[assembly: AssemblyDescription("Blur region plugin for Quick Picture Viewer")]
+[assembly: AssemblyTitle("QPV Plugins")]
+[assembly: AssemblyDescription("Set of preinstalled plugins for Quick Picture Viewer")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Module Art")]
-[assembly: AssemblyProduct("QPV Blur")]
+[assembly: AssemblyProduct("QPV Plugins")]
 [assembly: AssemblyCopyright("Copyright © 2020 Module Art")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
