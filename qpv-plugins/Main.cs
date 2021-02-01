@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace qpv_plugins
 {
-	public class Main
-	{
-		BlurRegionForm brf;
+    public class Main
+    {
+        BlurRegionForm brf;
 
         public Bitmap blur(Bitmap bmp, string path, bool darkMode, string language, bool alwaysOnTop)
         {
@@ -34,8 +34,8 @@ namespace qpv_plugins
             {
                 g.CopyFromScreen(
                     Screen.FromPoint(Cursor.Position).Bounds.X,
-                    Screen.FromPoint(Cursor.Position).Bounds.Y, 
-                    0, 0, 
+                    Screen.FromPoint(Cursor.Position).Bounds.Y,
+                    0, 0,
                     Screen.FromPoint(Cursor.Position).Bounds.Size
                 );
             }

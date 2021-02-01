@@ -1,3 +1,6 @@
-D:\Projects\qpv-blur\qpv-plugins\obj\Debug\qpv-plugins.csprojAssemblyReference.cache
-D:\Projects\qpv-blur\qpv-plugins\obj\Debug\qpv_plugins.BlurRegionForm.resources
-D:\Projects\qpv-blur\qpv-plugins\obj\Debug\qpv-plugins.csproj.GenerateResource.cache
+C:\Users\beelink\Desktop\qpv-plugins\qpv-plugins\obj\Debug\qpv-plugins.csprojAssemblyReference.cache
+C:\Users\beelink\Desktop\qpv-plugins\qpv-plugins\obj\Debug\qpv_plugins.BlurRegionForm.resources
+C:\Users\beelink\Desktop\qpv-plugins\qpv-plugins\obj\Debug\qpv-plugins.csproj.GenerateResource.cache
+D:\Projects\qpv-plugins\qpv-plugins\obj\Debug\qpv-plugins.csprojAssemblyReference.cache
+D:\Projects\qpv-plugins\qpv-plugins\obj\Debug\qpv_plugins.BlurRegionForm.resources
+D:\Projects\qpv-plugins\qpv-plugins\obj\Debug\qpv-plugins.csproj.GenerateResource.cache

@@ -56,9 +56,9 @@
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+			| System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.pictureBox1.Location = new System.Drawing.Point(10, 10);
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
 			this.pictureBox1.Name = "pictureBox1";
@@ -93,8 +93,8 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox1.Controls.Add(this.resetBtn);
 			this.groupBox1.Controls.Add(this.typeComboBox);
 			this.groupBox1.Controls.Add(this.label1);
@@ -125,8 +125,8 @@
 			// 
 			this.typeComboBox.FormattingEnabled = true;
 			this.typeComboBox.Items.AddRange(new object[] {
-            "Blur (Slow)",
-            "Pixelate"});
+			"Blur (Slow)",
+			"Pixelate"});
 			this.typeComboBox.Location = new System.Drawing.Point(10, 137);
 			this.typeComboBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.typeComboBox.Name = "typeComboBox";

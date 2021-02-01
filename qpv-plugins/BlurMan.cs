@@ -4,8 +4,8 @@ using System.Drawing.Imaging;
 
 namespace qpv_plugins
 {
-	public static class BlurMan
-	{
+    public static class BlurMan
+    {
         public unsafe static Bitmap ProcessBlur(Bitmap image, Rectangle rectangle, Int32 blurSize)
         {
             Bitmap blurred = new Bitmap(image.Width, image.Height);
