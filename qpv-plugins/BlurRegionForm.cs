@@ -16,8 +16,8 @@ namespace qpv_plugins
 			originalImage = bmp;
 			InitializeComponent();
 
-			radiusSlider.Value = Properties.Settings.Default.Radius;
-			typeComboBox.SelectedIndex = Properties.Settings.Default.Type;
+			radiusSlider.Value = Properties.Settings.Default.BlurRadius;
+			typeComboBox.SelectedIndex = Properties.Settings.Default.BlurType;
 
 			pictureBox1.Image = bmp;
 		}
@@ -31,7 +31,7 @@ namespace qpv_plugins
 			}
 			else
 			{
-				Result = BlurMan.ProcessPixelate(originalImage, new Rectangle(0, 0, originalImage.Width, originalImage.Height), radiusSlider.Value);
+				Result = BlurMan.ProcessPixelateOld(originalImage, new Rectangle(0, 0, originalImage.Width, originalImage.Height), radiusSlider.Value);
 				pictureBox1.Image = Result;
 			}
 			previewUpdated = true;
@@ -49,7 +49,7 @@ namespace qpv_plugins
 				}
 				else
 				{
-					Result = BlurMan.ProcessPixelate(originalImage, new Rectangle(0, 0, originalImage.Width, originalImage.Height), radiusSlider.Value);
+					Result = BlurMan.ProcessPixelateOld(originalImage, new Rectangle(0, 0, originalImage.Width, originalImage.Height), radiusSlider.Value);
 					pictureBox1.Image = Result;
 				}
 			}
@@ -75,8 +75,8 @@ namespace qpv_plugins
 
 		private void saveSettings()
 		{
-			Properties.Settings.Default.Radius = radiusSlider.Value;
-			Properties.Settings.Default.Type = typeComboBox.SelectedIndex;
+			Properties.Settings.Default.BlurRadius = radiusSlider.Value;
+			Properties.Settings.Default.BlurType = typeComboBox.SelectedIndex;
 			Properties.Settings.Default.Save();
 		}
 	}

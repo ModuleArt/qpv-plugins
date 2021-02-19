@@ -26,24 +26,24 @@ namespace qpv_plugins.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5")]
-        public int Radius {
+        public int BlurRadius {
             get {
-                return ((int)(this["Radius"]));
+                return ((int)(this["BlurRadius"]));
             }
             set {
-                this["Radius"] = value;
+                this["BlurRadius"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int Type {
+        public int BlurType {
             get {
-                return ((int)(this["Type"]));
+                return ((int)(this["BlurType"]));
             }
             set {
-                this["Type"] = value;
+                this["BlurType"] = value;
             }
         }
     }

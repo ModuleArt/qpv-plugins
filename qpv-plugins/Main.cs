@@ -25,6 +25,21 @@ namespace qpv_plugins
             }
         }
 
+        public Bitmap invert(Bitmap bmp, string path, bool darkMode, string language, bool alwaysOnTop)
+        {
+            return InvertMan.ProcessInvert(bmp);
+        }
+
+        public Bitmap grayscale(Bitmap bmp, string path, bool darkMode, string language, bool alwaysOnTop)
+        {
+            return GrayscaleMan.ProcessGrayscale(bmp);
+        }
+
+        public static Bitmap rainbow(Bitmap bmp, string path, bool darkMode, string language, bool alwaysOnTop)
+        {
+            return RainbowMan.ProcessRainbow(bmp);
+        }
+
         public Bitmap screenshot(Bitmap bmp, string path, bool darkMode, string language, bool alwaysOnTop)
         {
             System.Threading.Thread.Sleep(250);

@@ -1,12 +1,79 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Threading.Tasks;
 
 namespace qpv_plugins
 {
     public static class BlurMan
     {
-        public unsafe static Bitmap ProcessBlur(Bitmap image, Rectangle rectangle, Int32 blurSize)
+        public static unsafe Bitmap ProcessBlur(Bitmap image, Rectangle rectangle, Int32 blurSize) 
+        {
+            int width = image.Width;
+            int height = image.Height;
+            Bitmap blurred = new Bitmap(width, height);
+
+            using (Graphics graphics = Graphics.FromImage(blurred))
+                graphics.DrawImage(
+                    image, 
+                    new Rectangle(0, 0, width, height),
+                    new Rectangle(0, 0, width, height), 
+                    GraphicsUnit.Pixel
+                );
+
+            BitmapData blurredData = blurred.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadWrite, blurred.PixelFormat);
+
+            int bitsPerPixel = Image.GetPixelFormatSize(blurred.PixelFormat);
+
+            byte* scan0 = (byte*)blurredData.Scan0.ToPointer();
+
+            var options = new ParallelOptions();
+            int maxCore = Environment.ProcessorCount - 1;
+            options.MaxDegreeOfParallelism = maxCore > 0 ? maxCore : 1;
+
+            Parallel.For(rectangle.X, rectangle.Width, options, xx =>
+            {
+                for (int yy = rectangle.Y; yy < rectangle.Height; yy++)
+                {
+                    int avgR = 0, avgG = 0, avgB = 0;
+                    int blurPixelCount = 0;
+
+                    for (int x = xx; (x < xx + blurSize && x < width); x++)
+                    {
+                        for (int y = yy; (y < yy + blurSize && y < height); y++)
+                        {
+                            byte* data = scan0 + y * blurredData.Stride + x * bitsPerPixel / 8;
+
+                            avgB += data[0]; 
+                            avgG += data[1];
+                            avgR += data[2]; 
+
+                            blurPixelCount++;
+                        }
+                    }
+
+                    avgR = avgR / blurPixelCount;
+                    avgG = avgG / blurPixelCount;
+                    avgB = avgB / blurPixelCount;
+
+                    for (int x = xx; x < xx + blurSize && x < width && x < rectangle.Width; x++)
+                    {
+                        for (int y = yy; y < yy + blurSize && y < height && y < rectangle.Height; y++)
+                        {
+                            byte* data = scan0 + y * blurredData.Stride + x * bitsPerPixel / 8;
+
+                            data[0] = (byte)avgB;
+                            data[1] = (byte)avgG;
+                            data[2] = (byte)avgR;
+                        }
+                    }
+                };
+            });
+            blurred.UnlockBits(blurredData);
+            return blurred;
+        }
+
+        public unsafe static Bitmap ProcessBlurOld(Bitmap image, Rectangle rectangle, Int32 blurSize)
         {
             Bitmap blurred = new Bitmap(image.Width, image.Height);
 
@@ -76,7 +143,7 @@ namespace qpv_plugins
             return blurred;
         }
 
-        public static Bitmap ProcessPixelate(Bitmap image, Rectangle rectangle, Int32 pixelateSize)
+        public static Bitmap ProcessPixelateOld(Bitmap image, Rectangle rectangle, Int32 pixelateSize)
         {
             Bitmap pixelated = new Bitmap(image.Width, image.Height);
 

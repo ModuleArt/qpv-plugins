@@ -11,3 +11,4 @@ D:\Projects\qpv-plugins\qpv-plugins\obj\Release\qpv_plugins.BlurRegionForm.resou
 D:\Projects\qpv-plugins\qpv-plugins\obj\Release\qpv-plugins.csproj.GenerateResource.cache
 D:\Projects\qpv-plugins\qpv-plugins\obj\Release\qpv-plugins.dll
 D:\Projects\qpv-plugins\qpv-plugins\obj\Release\qpv-plugins.pdb
+D:\Projects\qpv-plugins\qpv-plugins\bin\Release\qpv-plugins.dll.config
