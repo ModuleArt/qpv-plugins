@@ -47,18 +47,19 @@
 			this.radiusSlider.LargeChange = 1;
 			this.radiusSlider.Location = new System.Drawing.Point(10, 55);
 			this.radiusSlider.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-			this.radiusSlider.Minimum = 1;
+			this.radiusSlider.Maximum = 25;
+			this.radiusSlider.Minimum = 2;
 			this.radiusSlider.Name = "radiusSlider";
 			this.radiusSlider.Size = new System.Drawing.Size(180, 45);
 			this.radiusSlider.TabIndex = 0;
-			this.radiusSlider.Value = 1;
+			this.radiusSlider.Value = 5;
 			this.radiusSlider.ValueChanged += new System.EventHandler(this.radiusSlider_ValueChanged);
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-			| System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.pictureBox1.Location = new System.Drawing.Point(10, 10);
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
 			this.pictureBox1.Name = "pictureBox1";
@@ -93,8 +94,8 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox1.Controls.Add(this.resetBtn);
 			this.groupBox1.Controls.Add(this.typeComboBox);
 			this.groupBox1.Controls.Add(this.label1);
@@ -125,8 +126,8 @@
 			// 
 			this.typeComboBox.FormattingEnabled = true;
 			this.typeComboBox.Items.AddRange(new object[] {
-			"Blur (Slow)",
-			"Pixelate"});
+            "Gaussian blur",
+            "Normal pixelate"});
 			this.typeComboBox.Location = new System.Drawing.Point(10, 137);
 			this.typeComboBox.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.typeComboBox.Name = "typeComboBox";
@@ -150,9 +151,9 @@
 			this.radiusLabel.Location = new System.Drawing.Point(10, 28);
 			this.radiusLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.radiusLabel.Name = "radiusLabel";
-			this.radiusLabel.Size = new System.Drawing.Size(50, 17);
+			this.radiusLabel.Size = new System.Drawing.Size(61, 17);
 			this.radiusLabel.TabIndex = 1;
-			this.radiusLabel.Text = "Radius:";
+			this.radiusLabel.Text = "Radius: 5";
 			// 
 			// BlurRegionForm
 			// 

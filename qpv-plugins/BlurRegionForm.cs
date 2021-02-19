@@ -26,12 +26,14 @@ namespace qpv_plugins
 		{
 			if (typeComboBox.SelectedIndex == 0)
 			{
-				Result = BlurMan.ProcessBlur(originalImage, new Rectangle(0, 0, originalImage.Width, originalImage.Height), radiusSlider.Value);
+				GaussianBlur gb = new GaussianBlur(originalImage as Bitmap);
+				Result = gb.Process(radiusSlider.Value);
 				pictureBox1.Image = Result;
 			}
 			else
 			{
-				Result = BlurMan.ProcessPixelateOld(originalImage, new Rectangle(0, 0, originalImage.Width, originalImage.Height), radiusSlider.Value);
+				Result = originalImage;
+				Result = PixelateMan.ProcessPixelate(originalImage, new Size(radiusSlider.Value, radiusSlider.Value));
 				pictureBox1.Image = Result;
 			}
 			previewUpdated = true;
@@ -44,12 +46,13 @@ namespace qpv_plugins
 			{
 				if (typeComboBox.SelectedIndex == 0)
 				{
-					Result = BlurMan.ProcessBlur(originalImage, new Rectangle(0, 0, originalImage.Width, originalImage.Height), radiusSlider.Value);
+					GaussianBlur gb = new GaussianBlur(originalImage as Bitmap);
+					Result = gb.Process(radiusSlider.Value);
 					pictureBox1.Image = Result;
 				}
 				else
 				{
-					Result = BlurMan.ProcessPixelateOld(originalImage, new Rectangle(0, 0, originalImage.Width, originalImage.Height), radiusSlider.Value);
+					Result = PixelateMan.ProcessPixelate(originalImage, new Size(radiusSlider.Value, radiusSlider.Value));
 					pictureBox1.Image = Result;
 				}
 			}
@@ -60,6 +63,7 @@ namespace qpv_plugins
 		private void radiusSlider_ValueChanged(object sender, EventArgs e)
 		{
 			previewUpdated = false;
+			radiusLabel.Text = "Radius: " + radiusSlider.Value;
 		}
 
 		private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)

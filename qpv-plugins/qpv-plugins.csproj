@@ -43,16 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlurMan.cs" />
     <Compile Include="BlurRegionForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BlurRegionForm.Designer.cs">
       <DependentUpon>BlurRegionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GaussianBlur.cs" />
     <Compile Include="GrayscaleMan.cs" />
     <Compile Include="InvertMan.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="PixelateMan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings1.Designer.cs">
       <AutoGen>True</AutoGen>

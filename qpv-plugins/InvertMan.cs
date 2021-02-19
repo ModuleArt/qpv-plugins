@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Imaging;
 using System.Threading.Tasks;
 
@@ -21,11 +20,7 @@ namespace qpv_plugins
             byte[] data = new byte[size];
             System.Runtime.InteropServices.Marshal.Copy(bmpData.Scan0, data, 0, size);
 
-            var options = new ParallelOptions();
-            int maxCore = Environment.ProcessorCount - 1;
-            options.MaxDegreeOfParallelism = maxCore > 0 ? maxCore : 1;
-
-            Parallel.For(0, height, options, y =>
+            Parallel.For(0, height, y =>
             {
                 for (int x = 0; x < width; x++)
                 {
