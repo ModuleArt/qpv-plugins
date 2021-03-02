@@ -26,18 +26,9 @@ namespace qpv_plugins
 
 		private void previewBtn_Click(object sender, EventArgs e)
 		{
-			if (typeComboBox.SelectedIndex == 0)
-			{
-				GaussianBlur gb = new GaussianBlur(originalImage as Bitmap);
-				Result = gb.Process(radiusSlider.Value);
-				pictureBox1.Image = Result;
-			}
-			else
-			{
-				Result = originalImage;
-				Result = PixelateMan.ProcessPixelate(originalImage, radiusSlider.Value, selection);
-				pictureBox1.Image = Result;
-			}
+			if (typeComboBox.SelectedIndex == 0) UpdateBlurResult();
+			else UpdatePixelateResult();
+			pictureBox1.Image = Result;
 			previewUpdated = true;
 		}
 
@@ -46,20 +37,29 @@ namespace qpv_plugins
 			saveSettings();
 			if (!previewUpdated)
 			{
-				if (typeComboBox.SelectedIndex == 0)
-				{
-					GaussianBlur gb = new GaussianBlur(originalImage as Bitmap);
-					Result = gb.Process(radiusSlider.Value);
-					pictureBox1.Image = Result;
-				}
-				else
-				{
-					Result = PixelateMan.ProcessPixelate(originalImage, radiusSlider.Value, selection);
-					pictureBox1.Image = Result;
-				}
+				if (typeComboBox.SelectedIndex == 0) UpdateBlurResult();
+				else UpdatePixelateResult();
 			}
 			DialogResult = DialogResult.OK;
 			Close();
+		}
+
+		private void UpdateBlurResult()
+		{
+			Bitmap selBmp = originalImage.Clone(selection, originalImage.PixelFormat);
+			GaussianBlur gb = new GaussianBlur(selBmp);
+			selBmp = gb.Process(radiusSlider.Value);
+			Result = originalImage.Clone(new Rectangle(0, 0, originalImage.Width, originalImage.Height), originalImage.PixelFormat);
+			using (Graphics g = Graphics.FromImage(Result))
+			{
+				g.DrawImage(selBmp, selection);
+			}
+			pictureBox1.Image = Result;
+		}
+
+		private void UpdatePixelateResult()
+		{
+			Result = PixelateMan.ProcessPixelate(originalImage, radiusSlider.Value, selection);
 		}
 
 		private void radiusSlider_ValueChanged(object sender, EventArgs e)
@@ -75,6 +75,7 @@ namespace qpv_plugins
 
 		private void resetBtn_Click(object sender, EventArgs e)
 		{
+			pictureBox1.Image = originalImage;
 			radiusSlider.Value = 5;
 			typeComboBox.SelectedIndex = 0;
 		}
