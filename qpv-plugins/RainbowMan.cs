@@ -1,34 +1,33 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace qpv_plugins
 {
 	public static class RainbowMan
 	{
-		public static Bitmap ProcessRainbow(Bitmap bmp)
+		public static Bitmap ProcessRainbow(Bitmap bmp, Rectangle selection, int count)
 		{
-            Bitmap temp = null;
-            temp = new Bitmap(bmp);
-            int raz = bmp.Height / 4;
-            int height = bmp.Height;
-            int width = bmp.Width;
-            Rectangle rect = new Rectangle(Point.Empty, bmp.Size);
+            int raz = bmp.Height / count;
+            Bitmap temp = new Bitmap(bmp);
+            if (selection.Width == 0) selection.Width = bmp.Width;
+            if (selection.Height == 0) selection.Height = bmp.Height;
 
-            BitmapData bmpData = temp.LockBits(rect, ImageLockMode.ReadOnly, temp.PixelFormat);
+            BitmapData bmpData = temp.LockBits(new Rectangle(Point.Empty, bmp.Size), ImageLockMode.ReadOnly, temp.PixelFormat);
             int bpp = (temp.PixelFormat == PixelFormat.Format32bppArgb) ? 4 : 3;
             int size = bmpData.Stride * bmpData.Height;
             byte[] data = new byte[size];
-            System.Runtime.InteropServices.Marshal.Copy(bmpData.Scan0, data, 0, size);
+            Marshal.Copy(bmpData.Scan0, data, 0, size);
 
             var options = new ParallelOptions();
             int maxCore = Environment.ProcessorCount - 1;
             options.MaxDegreeOfParallelism = maxCore > 0 ? maxCore : 1;
 
-            Parallel.For(0, height, options, y =>
+            Parallel.For(selection.Y, selection.Y + selection.Height, options, y =>
             {
-                for (int x = 0; x < width; x++)
+                for (int x = selection.X; x < selection.X + selection.Width; x++)
                 {
                     int index = y * bmpData.Stride + x * bpp;
 
@@ -49,7 +48,7 @@ namespace qpv_plugins
                 };
 
             });
-            System.Runtime.InteropServices.Marshal.Copy(data, 0, bmpData.Scan0, data.Length);
+            Marshal.Copy(data, 0, bmpData.Scan0, data.Length);
             temp.UnlockBits(bmpData);
             return temp;
         }

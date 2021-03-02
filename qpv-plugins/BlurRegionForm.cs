@@ -10,10 +10,12 @@ namespace qpv_plugins
 
 		private Bitmap originalImage;
 		private bool previewUpdated = false;
+		private Rectangle selection;
 
-		public BlurRegionForm(Bitmap bmp)
+		public BlurRegionForm(Bitmap bmp, Rectangle selection)
 		{
 			originalImage = bmp;
+			this.selection = selection;
 			InitializeComponent();
 
 			radiusSlider.Value = Properties.Settings.Default.BlurRadius;
@@ -33,7 +35,7 @@ namespace qpv_plugins
 			else
 			{
 				Result = originalImage;
-				Result = PixelateMan.ProcessPixelate(originalImage, new Size(radiusSlider.Value, radiusSlider.Value));
+				Result = PixelateMan.ProcessPixelate(originalImage, radiusSlider.Value, selection);
 				pictureBox1.Image = Result;
 			}
 			previewUpdated = true;
@@ -52,7 +54,7 @@ namespace qpv_plugins
 				}
 				else
 				{
-					Result = PixelateMan.ProcessPixelate(originalImage, new Size(radiusSlider.Value, radiusSlider.Value));
+					Result = PixelateMan.ProcessPixelate(originalImage, radiusSlider.Value, selection);
 					pictureBox1.Image = Result;
 				}
 			}
