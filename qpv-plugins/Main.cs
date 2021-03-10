@@ -9,20 +9,11 @@ namespace qpv_plugins
 
         public Bitmap blur(Bitmap bmp, string path, bool darkMode, string language, bool alwaysOnTop, Rectangle selection)
         {
-            if (brf == null || brf.IsDisposed)
-            {
-                brf = new BlurRegionForm(bmp, selection);
-            }
+            if (brf == null || brf.IsDisposed) brf = new BlurRegionForm(bmp, selection);
             brf.TopMost = alwaysOnTop;
+            brf.DarkMode = darkMode;
 
-            if (brf.ShowDialog() == DialogResult.OK)
-            {
-                return brf.Result;
-            }
-            else
-            {
-                return null;
-            }
+            return brf.ShowDialog() == DialogResult.OK ? brf.Result : null;
         }
 
         public Bitmap invert(Bitmap bmp, string path, bool darkMode, string language, bool alwaysOnTop, Rectangle selection)

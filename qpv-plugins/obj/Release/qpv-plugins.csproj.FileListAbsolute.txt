@@ -12,3 +12,13 @@ D:\Projects\qpv-plugins\qpv-plugins\obj\Release\qpv-plugins.csproj.GenerateResou
 D:\Projects\qpv-plugins\qpv-plugins\obj\Release\qpv-plugins.dll
 D:\Projects\qpv-plugins\qpv-plugins\obj\Release\qpv-plugins.pdb
 D:\Projects\qpv-plugins\qpv-plugins\bin\Release\qpv-plugins.dll.config
+D:\Projects\qpv-plugins\qpv-plugins\bin\Release\QuickLibrary.dll
+D:\Projects\qpv-plugins\qpv-plugins\bin\Release\Octokit.dll
+D:\Projects\qpv-plugins\qpv-plugins\bin\Release\Utf8Json.dll
+D:\Projects\qpv-plugins\qpv-plugins\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\Projects\qpv-plugins\qpv-plugins\bin\Release\QuickLibrary.pdb
+D:\Projects\qpv-plugins\qpv-plugins\bin\Release\Octokit.xml
+D:\Projects\qpv-plugins\qpv-plugins\bin\Release\Utf8Json.xml
+D:\Projects\qpv-plugins\qpv-plugins\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\Projects\qpv-plugins\qpv-plugins\obj\Release\qpv-plugins.csproj.CopyComplete
+D:\Projects\qpv-plugins\qpv-plugins\obj\Release\qpv_plugins.Properties.Resources.resources
