@@ -1,69 +1,21 @@
 # QPV Plugins
 Set of preinstalled plugins for the <a href="https://github.com/ModuleArt/quick-picture-viewer">Quick Picture Viewer</a>
 
-### Blur region
+## Effects:
 
-### Screenshot
+### Blur or pixelate
+![image](https://user-images.githubusercontent.com/40366303/111228060-d46b5e80-85a0-11eb-97c6-d038b79bc54a.png)
 
-### Crop / Canvas size
+### Grayscale:
+![image](https://user-images.githubusercontent.com/40366303/111228268-257b5280-85a1-11eb-8697-cf9562401ecc.png)
 
-Soon...
+### Invert colors:
+![image](https://user-images.githubusercontent.com/40366303/111228333-42b02100-85a1-11eb-8823-40a4813c83c0.png)
 
-### Resize
+### Rainbow:
+![image](https://user-images.githubusercontent.com/40366303/111228363-53609700-85a1-11eb-9567-bdf0473b4bb8.png)
 
-Soon...
+## Tools:
 
-### Color picker
-
-Soon...
-
-# How to create a plugin? (API v3)
-
-### Structure:
-
-```txt
-my-plugin.zip
-│
-├─ my-plugin                       // Resources folder (images, libraries...)
-│       │
-│       ├─ myFunc.light.png        // Function icon
-│       ├─ myFunc.dark.png         // Function icon (for dark mode)       
-│       └─ my-plugin.dll           // Main library
-│
-└─ my-plugin.json                  // Props file (name, version, functions...)
-```
-
-### Props:
-
-```jsonc
-{
-  "name": "my-plugin",   // Unique plugin codename                             
-  "version": "1.0.0",                                       
-  "title": "My plugin",                                                
-  "description": {   // Short description in several languages. Supported languages: "en", "ru", "es", "cn", "hu"     
-    "en": "This is my plugin"
-  },
-  "link": "https://github.com/ModuleArt/quick-plugin-template",   // Link to the plugin website/repository
-  "authors": [
-    {
-      "name": "Beelink",   // Nickname or real name of the creator
-      "link": "https://github.com/Beelink"   // Link to the creator website/GitHub profile
-    }
-  ],
-  "apiVer": 3,   // Quick Plugins API version. Supported versions: 3
-  "inputType": "bitmap",   // The type of data the plugin works with. Supported types: "bitmap"
-  "dllType": "csharp",   // Main library type. Supported types: "csharp", "cpp" 
-  "functions": [   // List of the all plugin tools and effects
-    {
-      "name": "myFunc",   // Function name e.g. public Bitmap myFunc(Bitmap bmp, string path)
-      "title": {   // Effect or tool title in several languages. Supported languages: "en", "ru", "es", "cn", "hu"   
-        "en": "My effect"
-      },
-      "type": "effect",   // Function type. Supported types: "effect", "tool"
-      "inputRequired": true,   // The plugin needs data to work with (see "inputType" prop)
-      "dialog": false,   // If function has GUI (dialog window)
-      "hideMainForm": false   // If the app's main window should be hidden while the function's dialog opened
-    }
-  ]
-}
-```
+### Screenshot:
+![image](https://user-images.githubusercontent.com/40366303/111228397-64a9a380-85a1-11eb-8a51-f2ca15476e12.png)
