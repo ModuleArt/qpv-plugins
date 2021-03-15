@@ -110,7 +110,7 @@ namespace qpv_plugins
 			}
 			closeBtn.DarkMode = DarkMode;
 			previewCheckbox.DarkMode = DarkMode;
-			typeComboBox.SetDarkMode(DarkMode);
+			typeComboBox.DarkMode = DarkMode;
 
 			infoTooltip.SetToolTip(closeBtn, NativeMan.GetMessageBoxText(NativeMan.DialogBoxCommandID.IDCLOSE) + " | Alt+F4");
 		}
