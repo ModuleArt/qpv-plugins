@@ -1,6 +1,8 @@
 # QPV Plugins
 Set of preinstalled plugins for the <a href="https://github.com/ModuleArt/quick-picture-viewer">Quick Picture Viewer</a>
 
+v1.2.4 (Stable) for QPV v3.1.0 - Mar 16, 2021 - <a href="https://github.com/ModuleArt/qpv-plugins/releases/download/v1.2.4/qpv-plugins.zip">Download (0.05 MB)</a>
+
 ## Effects:
 
 ### Blur or pixelate
@@ -19,3 +21,11 @@ Set of preinstalled plugins for the <a href="https://github.com/ModuleArt/quick-
 
 ### Screenshot:
 ![image](https://user-images.githubusercontent.com/40366303/111228397-64a9a380-85a1-11eb-8a51-f2ca15476e12.png)
+
+## How to install:
+
+1. Open Plugin manager window:<br>
+![image](https://user-images.githubusercontent.com/40366303/111229241-d0404080-85a2-11eb-8a86-90066b96d268.png)
+
+2. Drag & drop zip archive:<br>
+![image](https://user-images.githubusercontent.com/40366303/111229397-12698200-85a3-11eb-84bc-2482e0c73611.png)
