@@ -18,8 +18,6 @@
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="QuickLibrary">
-      <HintPath>..\dependencies\quick-library\QuickLibrary\bin\Release\net8.0-windows\QuickLibrary.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\dependencies\quick-library\QuickLibrary\QuickLibrary.csproj" />
   </ItemGroup>
 </Project>
