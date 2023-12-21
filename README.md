@@ -43,21 +43,30 @@
 
 ## 🔨 Contribution:
 
-Help Module Art!
+#### Help Module Art!
 
 - Give us a star ⭐
 - Fork and Clone! Awesome
 - Select existing <a href="https://github.com/ModuleArt/qpv-plugins/issues">issues</a> or create a <a href="https://github.com/ModuleArt/qpv-plugins/issues/new">new issue</a> and give us a PR with your bugfix or improvement after. We love it ❤
 
-How to clone:
+#### How to clone:
+
+1. Clone:
 
 ```powershell
 git clone --recurse-submodules https://github.com/ModuleArt/qpv-plugins
+```
+
+2. Download submodules:
+
+```
 git submodule init
 git submodule update
 ```
 
-Code contributors:
+3. Build submodules.
+
+#### Code contributors:
 
 - <a href="https://github.com/adriengivry">adriengivry</a> - <a href="https://github.com/ModuleArt/qpv-plugins/pull/9">Updated app to .NET8.0</a>
 - <a href="https://github.com/Beelink">Beelink</a> - Everything else 😘
