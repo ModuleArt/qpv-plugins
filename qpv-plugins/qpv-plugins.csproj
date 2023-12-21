@@ -11,15 +11,15 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="QuickLibrary">
-      <HintPath>..\dependencies\quick-library\QuickLibrary\obj\Debug\net8.0-windows\QuickLibrary.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="QuickLibrary">
+      <HintPath>..\dependencies\quick-library\QuickLibrary\bin\Release\net8.0-windows\QuickLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
