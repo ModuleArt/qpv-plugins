@@ -7,7 +7,8 @@
 
 ## ⬇ Download:
 
-- QPV Plugins v1.2.5 (Stable) for Quick Picture Viewer v3.1.5 - <a href="https://github.com/ModuleArt/qpv-plugins/releases/download/v1.2.5/qpv-plugins.zip">Download (0.05 MB)</a>
+- QPV Plugins v1.2.5 (Beta) for Quick Picture Viewer v3.1.5 - <a href="https://github.com/ModuleArt/qpv-plugins/releases/download/v1.2.5/qpv-plugins.zip">Download (0.05 MB)</a>
+- QPV Plugins v1.2.4 (Stable) for Quick Picture Viewer v3.1.4 - <a href="https://github.com/ModuleArt/qpv-plugins/releases/download/v1.2.4/qpv-plugins.zip">Download (0.05 MB)</a>
 
 ## 🎨 Effects:
 

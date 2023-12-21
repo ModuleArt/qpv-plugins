@@ -1,14 +1,19 @@
 {
   "name": "qpv-plugins",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "title": "QPV Plugins",
   "description": {
     "en": "Set of preinstalled plugins",
+    "ar": "مجموعة من المكونات الإضافية التي تم تثبيتها مسبقًا",
     "cn": "一组预装的插件",
+    "hr": "Skup unaprijed instaliranih dodataka",
     "fr": "Un ensemble de plugins préinstallés",
+    "de": "Satz vorinstallierter Plugins",
     "hu": "Előre telepített bővítmények készlete",
     "ru": "Набор предустановленных плагинов",
-    "es": "Conjunto de complementos preinstalados"
+    "es": "Conjunto de complementos preinstalados",
+    "tr": "Önceden yüklenmiş eklentiler seti",
+    "ua": "Набір попередньо встановлених плагінів"
   },
   "link": "https://github.com/ModuleArt/qpv-plugins",
   "authors": [
@@ -25,16 +30,21 @@
       "name": "blur",
       "title": {
         "en": "Blur or pixelate",
+        "ar": "طمس أو بكسل",
         "cn": "模糊或像素化",
+        "hr": "Zamućenje ili pikselat",
         "fr": "Flou ou pixeliser",
+        "de": "Verschwommen oder pixelig",
         "hu": "Elmosódott vagy pixeles",
         "ru": "Размытие или пикселизация",
-        "es": "Desenfocar o pixelar"
+        "es": "Desenfocar o pixelar",
+        "tr": "Bulanık veya pikselat",
+        "ua": "Розмиття або пікселізація"
       },
       "type": "effect",
       "inputRequired": true,
       "dialog": true,
-      "hideMainForm":  false,
+      "hideMainForm": false,
       "hotkey": {
         "ctrl": true,
         "shift": true,
@@ -42,20 +52,25 @@
         "key": 66
       }
     },
-	  {
+    {
       "name": "grayscale",
       "title": {
         "en": "Grayscale",
+        "ar": "رمادي",
         "cn": "灰阶",
+        "hr": "Sive boje",
         "fr": "Niveaux de gris",
+        "de": "Graustufen",
         "hu": "Szürkeárnyalatos",
         "ru": "Оттенки серого",
-        "es": "Escala de grises"
+        "es": "Escala de grises",
+        "tr": "Gri tonlamalı",
+        "ua": "Відтінки сірого"
       },
       "type": "effect",
       "inputRequired": true,
       "dialog": false,
-      "hideMainForm":  false,
+      "hideMainForm": false,
       "hotkey": {
         "ctrl": false,
         "shift": false,
@@ -63,20 +78,25 @@
         "key": 71
       }
     },
-	  {
+    {
       "name": "invert",
       "title": {
         "en": "Invert colors",
+        "ar": "ألوان عكس",
         "cn": "反转颜色",
+        "hr": "Invertirajte boje",
         "fr": "Inverser les couleurs",
+        "de": "Farben umkehren",
         "hu": "Invert színek",
         "ru": "Инвертировать цвета",
-        "es": "Captura de pantalla"
+        "es": "Captura de pantalla",
+        "tr": "Renkleri tersine çevirin",
+        "ua": "Інвертувати кольори"
       },
       "type": "effect",
       "inputRequired": true,
       "dialog": false,
-      "hideMainForm":  false,
+      "hideMainForm": false,
       "hotkey": {
         "ctrl": true,
         "shift": true,
@@ -84,20 +104,25 @@
         "key": 73
       }
     },
-	  {
+    {
       "name": "rainbow",
       "title": {
         "en": "Rainbow",
+        "ar": "قوس المطر",
         "cn": "彩虹",
+        "hr": "Duga",
         "fr": "Arc-en-ciel",
+        "de": "Regenbogen",
         "hu": "Szivárvány",
         "ru": "Радуга",
-        "es": "Arcoíris"
+        "es": "Arcoíris",
+        "tr": "Gökkuşağı",
+        "ua": "Веселка"
       },
       "type": "effect",
       "inputRequired": true,
       "dialog": false,
-      "hideMainForm":  false,
+      "hideMainForm": false,
       "hotkey": {
         "ctrl": false,
         "shift": false,
@@ -109,16 +134,21 @@
       "name": "screenshot",
       "title": {
         "en": "Screenshot",
+        "ar": "لقطة شاشة",
         "cn": "截屏",
+        "hr": "Snimka zaslona",
         "fr": "Capture d'écran",
+        "de": "Bildschirmfoto",
         "hu": "Pillanatkép",
-        "ru": "Скриншот",
-        "es": "Captura de pantalla"
+        "ru": "Cнимок экрана",
+        "es": "Captura de pantalla",
+        "tr": "Ekran görüntüsü",
+        "ua": "Знімок екрану"
       },
       "type": "tool",
       "inputRequired": false,
       "dialog": false,
-      "hideMainForm":  true,
+      "hideMainForm": true,
       "hotkey": {
         "ctrl": false,
         "shift": false,
